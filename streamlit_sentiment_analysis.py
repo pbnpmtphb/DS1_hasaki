@@ -1,4 +1,3 @@
-from wordcloud import WordCloud
 from test_preprocessing import process_text, process_special_word, process_postag_thesea, remove_stopwords
 import numpy as np
 import pandas as pd
