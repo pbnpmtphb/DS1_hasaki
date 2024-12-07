@@ -27,11 +27,11 @@ def load_list(file_path):
         return file.read().split('\n')
 
 # Load resource
-emoji_dict = load_dictionary('./pre_processing/emojicon.txt')  
-teen_dict = load_dictionary('./pre_processing/teencode.txt')  
-english_dict = load_dictionary('./pre_processing/english-vnmese.txt')  
-wrong_lst = load_list('./pre_processing/wrong-word.txt')  
-stopword_lst = load_list('./pre_processing/vietnamese-stopwords.txt')  
+emoji_dict = load_dictionary('./emojicon.txt')  
+teen_dict = load_dictionary('./teencode.txt')  
+english_dict = load_dictionary('./english-vnmese.txt')  
+wrong_lst = load_list('./wrong-word.txt')  
+stopword_lst = load_list('./vietnamese-stopwords.txt')  
 
 
 # Load models
