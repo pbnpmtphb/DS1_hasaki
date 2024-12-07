@@ -102,7 +102,6 @@ elif choice == 'Build Project':
     '''
     st.markdown( multi3)
     st.image('ROC_curve.png')
-    st.write("##### Summary: This model is good enough for classification.")    
 elif choice == 'New Prediction':
     st.subheader("Select data")
     flag = False
