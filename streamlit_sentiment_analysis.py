@@ -87,7 +87,7 @@ elif choice == 'Build Project':
     '''
     st.markdown(multi2)
     st.write("##### Output dữ liệu sau khi tiền xử lý")
-    Output = pd.read_csv("Comment_df.csv", encoding='utf-8')
+    Output = pd.read_csv("comment_df.csv", encoding='utf-8')
     st.dataframe(Output.head(10))
 
     st.write("##### 3. Build model")
