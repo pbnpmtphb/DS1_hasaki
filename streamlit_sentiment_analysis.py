@@ -8,9 +8,6 @@ from sklearn import metrics
 import seaborn as sns
 
 
-# from imblearn.over_sampling import SMOTE
-
-
 # Load dictionary and list
 def load_dictionary(file_path):
     with open(file_path, 'r', encoding="utf8") as file:
@@ -46,7 +43,7 @@ with open('logistic_regression_model.pkl', 'rb') as file:
 st.title("Data Science Project")
 st.markdown("# :rainbow[Sentiment Analysis]")
 
-menu = ["Business Objective", "Build Project", "New Prediction"]
+menu = ["Vấn đề kinh doanh", "Xây dựng model", "Tìm kiếm mới"]
 choice = st.sidebar.selectbox('Menu', menu)
 st.sidebar.write("""#### Thành viên thực hiện:
                  Lương Nhã Hoàng Hà & Phạm Bích Nhật""")
@@ -56,8 +53,8 @@ st.sidebar.write("""#### Thời gian thực hiện:
                  14/12/2024""")
 
 #Menu bar
-if choice == 'Business Objective':    
-    #Business Objective page:
+if choice == 'Vấn đề kinh doanh':    
+    #Vấn đề kinh doanh page:
     st.markdown("## Vấn đề kinh doanh")
     multi="""
     ##### Nhận diện, phân loại phản hồi của khách hàng trên website Hasaki.vn.
@@ -67,11 +64,11 @@ if choice == 'Business Objective':
     st.write("""##### Thực hiện: Sử dụng Machine Learning (Random Forest).""")
     st.image("Sentiment-analysis.jpg")
 
-elif choice == 'Build Project':
-    # Build Project page
+elif choice == 'Xây dựng model':
+    # Xây dựng model page
     st.markdown("1. Tiền xử lý dữ liệu ")
     data = pd.read_csv("Danh_gia.csv", encoding='utf-8')
-    st.subheader("Build Project")
+    st.subheader("Xây dựng model")
     st.write("##### 1. Thu thập và đọc data")
     st.dataframe(data.head(10))
     st.image('PhanPhoiRating.png')
@@ -102,7 +99,7 @@ elif choice == 'Build Project':
     '''
     st.markdown( multi3)
     st.image('ROC_curve.png')
-elif choice == 'New Prediction':
+elif choice == 'Tìm kiếm mới':
     st.subheader("Select data")
     flag = False
     lines = None
@@ -137,4 +134,5 @@ elif choice == 'New Prediction':
         # Display Prediction
         st.write("### Prediction:")
         st.code(f"Sentiment: {sentiment}")
+
 
