@@ -68,7 +68,6 @@ if choice == 'Vấn đề kinh doanh':
 
 # Model Building page
 elif choice == 'Xây dựng model':
-    st.markdown("1. Tiền xử lý dữ liệu ")
     data = pd.read_csv("Danh_gia.csv", encoding='utf-8')
     st.subheader("Xây dựng model")
     st.write("##### 1. Thu thập và đọc data")
